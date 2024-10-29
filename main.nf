@@ -21,19 +21,19 @@ workflow{
     
     // picardQC
 
-   // PICARDQC(bam_pairs_ch, params.fasta_index_tar, params.bedfile, params.run_CollectMultipleMetrics, \
-   // params.run_CollectHsMetrics, params.run_CollectTargetedPcrMetrics, params.run_CollectRnaSeqMetrics, \
-   // params.ref_annot_refflat_path)
+   PICARDQC(bam_pairs_ch, params.fasta_index_tar, params.bedfile, params.run_CollectMultipleMetrics, \
+   params.run_CollectHsMetrics, params.run_CollectTargetedPcrMetrics, params.run_CollectRnaSeqMetrics, \
+   params.ref_annot_refflat_path)
 
     // samtool
 
-   // SAMTOOLS_FLAGSTAT(bam_pairs_ch)
+   SAMTOOLS_FLAGSTAT(bam_pairs_ch)
 
     // veriftbam ID can use vcfs produced by TNHaplotyper
-   // VERIFYBAMID(bam_pairs_ch, params.vcf_file)
+   VERIFYBAMID(bam_pairs_ch, params.vcf_file)
 
     // vcf handler
-   // mutec2_path = "$params.mutec2_vcf_path" + "/*_markdup_recalibrated_tnhaplotyper2.vcf.{gz,gz.tbi}"
+
    pindel_path = "$params.pindel_vcf_path" + "/*_vs_TA2_S59_L008_tumor.flagged.vcf.{gz,gz.tbi}"
    pindel_path_ch = channel.fromFilePairs( "$pindel_path" )
 
