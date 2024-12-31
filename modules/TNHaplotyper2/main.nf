@@ -1,7 +1,7 @@
 process TNHaplotyper2
 {
     debug true
-    publishDir '.', mode:'copy'
+    publishDir  path:"${params.outdir}/TNHaplotyper", mode:'copy'
     tag "${reads[0]}, ${reads[1]}"
     //input ref files
     input:

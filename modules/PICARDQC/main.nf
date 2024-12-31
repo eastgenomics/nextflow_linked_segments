@@ -1,7 +1,7 @@
 process PICARDQC {
     tag "${bam[0]}, ${bam[1]}"
     debug true
-    publishDir params.outdir, mode:'copy'
+    publishDir  path:"${params.outdir}/picardQC", mode:'copy'
 
     input:
 

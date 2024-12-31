@@ -2,7 +2,7 @@ process VCF_HANDLER
 {
   tag "${sample_id}"
   // debug true
-  publishDir params.outdir, mode:'copy'
+  publishDir  path:"${params.outdir}/VCF_handler_for_uranus", mode:'copy'
   errorStrategy 'finish'
 
 // need to consider best error strategy - terminate (default) means if one task fails, the pipeline is immediately terminated

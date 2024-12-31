@@ -4,7 +4,7 @@ process SAMTOOLS_FLAGSTAT
 {
   tag "${bams[0]}, ${bams[1]}"
   debug true
-  publishDir params.outdir, mode:'copy'
+  publishDir  path:"${params.outdir}/samtools_flagstat", mode:'copy'
 
   input:
     tuple val(sample_id), path(bams)

@@ -2,7 +2,7 @@ process VERIFYBAMID
 {
   tag "${reads[0]}, ${reads[1]}"
   debug true
-  publishDir params.outdir, mode:'copy'
+  publishDir path:"${params.outdir}/verifybamID", mode:'copy'
 
   input:
     tuple val(sample_id), path(reads)
