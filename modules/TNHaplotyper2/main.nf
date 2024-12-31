@@ -6,7 +6,7 @@ process TNHaplotyper2
     //input ref files
     input:
         tuple val(sample_id), path(reads)
-        val fasta_index_tar
+        val mutect2_fasta_index_tar
         val gatkResource
     //output vcf and index files
     output:

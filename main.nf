@@ -17,7 +17,7 @@ workflow{
    bam_pairs = "$params.bam_path" + "/*.{bam,bam.bai}"
    bam_pairs_ch = channel.fromFilePairs("$bam_pairs")
     //run TNHaplotyper2 process from TNHaplotyper2 module
-   mutec_path_ch = TNHaplotyper2(bam_pairs_ch, params.fasta_index_tar, params.gatkResource).tnhaplotyper2_vcf
+   mutec_path_ch = TNHaplotyper2(bam_pairs_ch, params.mutect2_fasta_index_tar, params.gatkResource).tnhaplotyper2_vcf
     
     // picardQC
 
