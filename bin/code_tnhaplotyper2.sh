@@ -37,7 +37,7 @@ export SENTIEON_INSTALL_DIR=${pathToBin}/sentieon-genomics-*
 SENTIEON_BIN_DIR=$SENTIEON_INSTALL_DIR/bin
 SENTIEON_APP=$SENTIEON_BIN_DIR/sentieon
 #exportlibjemalloc
-export LD_PRELOAD=${pathToBin}/sentieon-genomics-202112.07/lib/libjemalloc.so.2
+export LD_PRELOAD=${pathToBin}/sentieon-genomics-202010.02/lib/libjemalloc.so.1
 export MALLOC_CONF=metadata_thp:auto,background_thread:true,dirty_decay_ms:30000,muzzy_decay_ms:30000
 #generate ignore_decoy bed file
 grep -v "hs37d5" "genome/genome.fa.fai"|grep -v "chrEBV"|grep -v "hs38d1"|grep -v "decoy"|awk 'BEGIN{OFS="\t"}{print $1,0,$2}' > ignore_decoy.bed

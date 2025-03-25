@@ -15,6 +15,6 @@ process TNHaplotyper2
     script:
         """
         echo "Running ${reads[0]} ${reads[1]}"
-        bash nextflow-bin/code_tnhaplotyper2.sh $fasta_index_tar $gatkResource ${reads[0]} ${reads[1]}
+        bash nextflow-bin/code_tnhaplotyper2.sh $mutect2_fasta_index_tar $gatkResource ${reads[0]} ${reads[1]}
         """
 }
