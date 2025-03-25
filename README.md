@@ -25,11 +25,11 @@ Contains the source code, sentieon package (sentieon-genomics-202112.07) and sen
  dx build --nextflow (inside the cloned folder)
  ```
  The output to the command line of dx build will included as the applet ID for running the nextflow command
- The ID for the tested version is applet-Gv7gy9Q4Fzqjg2gJJQVKKg65
+ The ID for the tested version is applet-GzQj5p04FzqVgQ6yX7QYBVjy
 ### To run Uranus_workflow_segments_nextflow on DNAnexus
  ```
- dx run applet-Gv7gy9Q4Fzqjg2gJJQVKKg65 -inextflow_pipeline_params="--pindel_vcf_path=dx://project-xxx:[path/to/pindel/vcfs] --bam_path=dx://project-xxx:[path/to/bams]"
+ dx run applet-GzQj5p04FzqVgQ6yX7QYBVjy -inextflow_pipeline_params="--pindel_vcf_path=dx://project-xxx:[path/to/pindel/vcfs] --bam_path=dx://project-xxx:[path/to/bams]"
  # Example
- dx run applet-Gv7gy9Q4Fzqjg2gJJQVKKg65 -inextflow_pipeline_params="--pindel_vcf_path=dx://project-GqFKf584FzqQzv1Y5Jj51gyp:/inputs/pindel --bam_path=dx://project-GqFKf584FzqQzv1Y5Jj51gyp:/inputs/bams"
+ dx run applet-GzQj5p04FzqVgQ6yX7QYBVjy -inextflow_pipeline_params="--pindel_vcf_path=dx://project-GqFKf584FzqQzv1Y5Jj51gyp:/inputs/pindel --bam_path=dx://project-GqFKf584FzqQzv1Y5Jj51gyp:/inputs/bams"
 
 ```
