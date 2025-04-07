@@ -17,7 +17,7 @@ Calls the modules, sorts channels,  and runs the workflow
 ### modules
 Contains module for TNHaplotyper, PicardQC, Samtools Flagstat, VerifyBAMID, VCF_Handler_For_Uranus
 ### bin folder
-Contains the source code, sentieon package (sentieon-genomics-202112.07) and sentieon licence, 
+Contains the source code, sentieon package (sentieon-genomics-202010.02) and sentieon licence, 
 ### To build mutect2_nextflow on DNAnexus
 ```
  git clone <repo>
